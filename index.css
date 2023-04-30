@@ -1,0 +1,99 @@
+.page {
+  padding: 50px 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  height: 101vh;
+}
+
+.page__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1 1 auto;
+}
+
+.days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 20px;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer__button {
+  border: 2px solid #000;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 27px;
+}
+
+.day {
+  background-color: #d2f9ff;
+  width: 120px;
+  height: 75px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 10px;
+}
+
+.day_type_current {
+  background-color: #00bbf0;
+}
+
+
+.day_type_passed {
+  background-color: #f4f4f4;
+}
+
+.day_type_selected {
+  background-color: #fff;
+  margin-bottom: 200px;
+  position: relative;
+}
+
+.day__number {
+  font-size: 23px;
+  margin: 0;
+}
+
+.day__month {
+  font-size: 15px;
+  margin: 0;
+}
+
+.day__info {
+  display: none;
+  position: absolute;
+  top: 100%;
+}
+
+.day__info_type_checked {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.day__title {
+  margin: 0;
+  margin-top: 10px;
+}

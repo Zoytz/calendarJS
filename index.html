@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang='ru'>
+
+<head>
+  <meta charset='UTF-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <link rel='stylesheet' href='index.css'>
+  <title>CalendarJS</title>
+</head>
+
+<body>
+  <div class='page'>
+    <main class='main'>
+      <h1 class='main__title'>
+        Расписание богослужений
+      </h1>
+      <ul class='days page__list'>
+
+      </ul>
+    </main>
+    <footer class='footer'>
+      <button id='prevButton' type='button' class='footer__button'>&#129040;</button>
+      <p class='footer__month'>
+      </p>
+      <button id='nextButton' type='button' class='footer__button'>&#129042;</button>
+    </footer>
+  </div>
+  <template id='day'>
+    <li class='day'>
+      <h2 class='day__number'>
+      </h2>
+      <p class='day__month'>
+      </p>
+      <div class='day__info'>
+        <h2 class='day__title'>
+          Яблочный Спас
+        </h2>
+        <ul class='day__todos page__list'>
+          <li class='day__todo'>
+            9:00 Молиться
+          </li>
+          <li class='day__todo'>
+            10:00 Еще молиться
+          </li>
+          <li class='day__todo'>
+            11:00 Поститься
+          </li>
+          <li class='day__todo'>
+            12:00 Опять молиться
+          </li>
+        </ul>
+      </div>
+    </li>
+  </template>
+  <script src='node_modules/moment/min/moment.min.js'></script>
+  <script src='index.js'></script>
+</body>
+
+</html>
