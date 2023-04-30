@@ -117,6 +117,7 @@ const renderMonths = () => {
     const dayCard = dayTemplate.cloneNode(true);
     dayCard.querySelector('.day__number').textContent = day.day;
     dayCard.querySelector('.day__month').textContent = day.month;
+
     if (day.passed) {
       dayCard.classList.add('day_type_passed');
     }
@@ -164,6 +165,15 @@ const addDaysListeners = () => {
   const daysArr = document.querySelectorAll('.day');
   daysArr.forEach((day) => {
     day.addEventListener('click', handleDayClick);
+
+    const dayInfo = day.querySelector('.day__info');
+
+    const listPosition = daysContainer.getBoundingClientRect();
+    const dayPosition = day.getBoundingClientRect();
+    const relativeLeftPosition = dayPosition.left - listPosition.left;
+
+    dayInfo.style.width = `${listPosition.width}px`;
+    dayInfo.style.left = `-${relativeLeftPosition}px`;
   });
 };
 
